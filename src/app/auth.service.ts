@@ -10,8 +10,8 @@ import { environment } from '../environments/environment';
 })
 export class AuthService {
 
-  apiURL: string = environment.apiURLBase + "/api/usuarios"
-  tokenURL: string = environment.apiURLBase + environment.obterTokenUrl
+  apiURL: string = environment.apiURLBase + "/api/usuarios";
+  tokenURL: string = environment.apiURLBase + environment.obterTokenUrl;
   clientID: string = environment.clientId;
   clientSecret: string = environment.clientSecret;
 
@@ -30,7 +30,7 @@ export class AuthService {
                               .set('grant_type', 'password')
       
       const headers = {
-        'Autorization' : 'Basic ' + btoa(`${this.clientID}:${this.clientSecret}`),
+        'Authorization' : 'Basic ' + btoa(`${this.clientID}:${this.clientSecret}`),
         'Content-Type' : 'application/x-www-form-urlencoded'
       }
 
